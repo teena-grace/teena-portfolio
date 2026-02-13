@@ -71,20 +71,51 @@ export const portfolioData = {
 
   projects: [
     {
+      title: "VIRTU-BOARD-AI",
+      description: "An AI-powered virtual whiteboard application that enables real-time collaborative drawing, sketching, and brainstorming with intelligent features for enhanced creativity and productivity.",
+      techStack: ["AI", "Machine Learning", "Web Development", "Real-time Collaboration"],
+      features: [
+        "Real-time collaborative whiteboard",
+        "AI-powered drawing assistance",
+        "Intelligent shape recognition",
+        "Multi-user synchronization",
+        "Smart object detection",
+        "Cloud-based storage"
+      ],
+      github: "https://github.com/teena-grace/VIRTU-BOARD-AI",
+      demo: "#"
+    },
+    {
       title: "Minutes of Meeting Recorder",
       description: "Automated meeting summarization system that extracts key discussion points & action items, generates structured searchable summaries, and significantly reduces manual note-taking time.",
-      techStack: ["Python", "NLP", "Machine Learning"],
+      techStack: ["Python", "NLP", "Machine Learning", "Speech Recognition"],
       features: [
         "Automated meeting summarization",
         "Key discussion point extraction",
         "Action item identification",
-        "Structured summary generation"
+        "Structured summary generation",
+        "Speaker identification",
+        "Export to multiple formats"
       ],
       github: "#",
       demo: "#"
+    },
+    {
+      title: "AI Portfolio Website",
+      description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS, showcasing projects, skills, and professional experience with smooth animations and dark mode support.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      features: [
+        "Responsive design",
+        "Dark mode support",
+        "Smooth animations",
+        "SEO optimized",
+        "Fast loading",
+        "Contact form integration"
+      ],
+      github: "https://github.com/teena-grace/teena-portfolio",
+      demo: "https://teena-portfolio.vercel.app"
     }
   ],
-
   skills: {
     programming: ["Python", "C", "C++", "SQL", "HTML"],
     aiMl: ["Machine Learning", "Natural Language Processing", "Data Analysis"],
