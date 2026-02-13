@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  turbopack: {
+    // Ensure Turbopack resolves the project root correctly when Next infers
+    root: '.'
+  },
   images: {
     unoptimized: true,
   },

@@ -1,6 +1,7 @@
 "use client";
 
-import { Download, Briefcase, Mail, MapPin, Linkedin } from 'lucide-react';
+import { Download, Briefcase, Mail, MapPin } from 'lucide-react';
+import { SiLinkedin } from 'react-icons/si';
 import { portfolioData } from '@/data/portfolioData';
 
 const Hero = () => {
@@ -57,7 +58,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <Linkedin size={16} className="text-blue-600" />
+              <SiLinkedin size={16} className="text-blue-600" />
               <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
                 LinkedIn
               </a>

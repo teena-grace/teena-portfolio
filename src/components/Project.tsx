@@ -1,105 +1,190 @@
 "use client";
 
-import { Github, ExternalLink, Lightbulb } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { portfolioData } from '@/data/portfolioData';
+import { useState } from 'react';
 
-const Projects = () => {
-  const { projects } = portfolioData;
+const Contact = () => {
+  const { personal } = portfolioData;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add form submission logic here
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! I will get back to you soon.');
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      value: personal.email,
+      href: `mailto:${personal.email}`
+    },
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      value: personal.phone,
+      href: `tel:${personal.phone}`
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      label: "Location",
+      value: personal.location,
+      href: "#"
+    },
+    {
+      icon: <SiLinkedin className="w-5 h-5" />,
+      label: "LinkedIn",
+      value: "Connect on LinkedIn",
+      href: personal.linkedin
+    }
+  ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-slate-800">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
+              Let's Connect!
             </span>
           </h2>
           <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+            I'm always open to discussing new opportunities and collaborations
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:scale-105"
-            >
-              {/* Project Header with Icon */}
-              <div className="h-48 bg-linear-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all"></div>
-                <Lightbulb className="w-20 h-20 text-white z-10" strokeWidth={1.5} />
-              </div>
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Information */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+              Get in Touch
+            </h3>
 
-              {/* Project Content */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                  {project.title}
-                </h3>
+            <div className="space-y-4">
+              {contactInfo.map((info, index) => (
+                <a
+                  key={index}
+                  href={info.href}
+                  target={info.label === "LinkedIn" ? "_blank" : undefined}
+                  rel={info.label === "LinkedIn" ? "noopener noreferrer" : undefined}
+                  className="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  <div className="p-3 bg-linear-to-br from-blue-600 to-purple-600 rounded-lg text-white">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{info.label}</p>
+                    <p className="text-gray-800 dark:text-gray-200 font-medium">{info.value}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
 
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2 pt-2">
-                  <p className="font-semibold text-gray-700 dark:text-gray-300 text-sm">Key Features:</p>
-                  <ul className="space-y-1">
-                    {project.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-3 pt-4">
-                  <a
-                    href={project.github}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 dark:bg-slate-700 text-white rounded-lg hover:bg-gray-900 dark:hover:bg-slate-600 transition-colors"
-                  >
-                    <Github size={18} />
-                    <span>Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all"
-                  >
-                    <ExternalLink size={18} />
-                    <span>Demo</span>
-                  </a>
-                </div>
+            {/* Social Links */}
+            <div className="pt-6">
+              <p className="text-gray-700 dark:text-gray-300 mb-4 font-semibold">Follow Me:</p>
+              <div className="flex gap-4">
+                <a
+                  href={personal.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-linear-to-br from-blue-600 to-blue-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"
+                >
+                  <SiLinkedin className="w-6 h-6" />
+                </a>
+                <a
+                  href={personal.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-linear-to-br from-gray-700 to-gray-900 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"
+                >
+                  <SiGithub className="w-6 h-6" />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Add More Projects Card */}
-        <div className="mt-8 text-center">
-          <div className="inline-block p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-lg">
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              More projects available on GitHub
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all"
-            >
-              <Github size={20} />
-              View All Projects
-            </a>
+          {/* Contact Form */}
+          <div>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+                Send Message
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-gray-800 dark:text-gray-200"
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-gray-800 dark:text-gray-200"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-gray-800 dark:text-gray-200"
+                    placeholder="Your message here..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -107,4 +192,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Contact;

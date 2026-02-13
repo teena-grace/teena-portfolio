@@ -1,6 +1,7 @@
 "use client";
 
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { SiLinkedin, SiGithub } from 'react-icons/si';
 import { portfolioData } from '@/data/portfolioData';
 import { useState } from 'react';
 
@@ -47,7 +48,7 @@ const Contact = () => {
       href: "#"
     },
     {
-      icon: <Linkedin className="w-5 h-5" />,
+      icon: <SiLinkedin className="w-5 h-5" />,
       label: "LinkedIn",
       value: "Connect on LinkedIn",
       href: personal.linkedin
@@ -106,15 +107,15 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="p-3 bg-linear-to-br from-blue-600 to-blue-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"
                 >
-                  <Linkedin className="w-6 h-6" />
+                  <SiLinkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://github.com/teena-grace"
+                  href={personal.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-linear-to-br from-gray-700 to-gray-900 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"
                 >
-                  <Github className="w-6 h-6" />
+                  <SiGithub className="w-6 h-6" />
                 </a>
               </div>
             </div>

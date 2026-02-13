@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, ExternalLink, Lightbulb } from 'lucide-react';
+import { ExternalLink, Lightbulb } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 import { portfolioData } from '@/data/portfolioData';
 
 const Projects = () => {
@@ -71,7 +72,7 @@ const Projects = () => {
                     href={project.github}
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 dark:bg-slate-700 text-white rounded-lg hover:bg-gray-900 dark:hover:bg-slate-600 transition-colors"
                   >
-                    <Github size={18} />
+                    <SiGithub size={18} />
                     <span>Code</span>
                   </a>
                   <a
@@ -97,7 +98,7 @@ const Projects = () => {
               href="#"
               className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all"
             >
-              <Github size={20} />
+              <SiGithub size={20} />
               View All Projects
             </a>
           </div>
