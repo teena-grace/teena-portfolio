@@ -1,8 +1,8 @@
 export const portfolioData = {
   personal: {
     name: "Teena Jadhao",
-    tagline: "AI Engineering Student | Machine Learning & NLP Enthusiast",
-    intro: "I am a B.Tech Artificial Intelligence student with strong foundations in Machine Learning, NLP, and Full Stack Development. Passionate about building intelligent systems that solve real-world problems.",
+    tagline: "AI Engineering Student | Vibe coding and UI/UX designing Enthusiast",
+    intro: "I am a B.Tech Artificial Intelligent student .Passionate Designer & Vibe Coder crafting creative and intelligent digital experiences.",
     location: "Nagpur, Maharashtra, India",
     email: "teenajadhao@gmail.com",
     phone: "+91-9561546121",
@@ -69,19 +69,37 @@ export const portfolioData = {
     }
   ],
 
-  projects: [
+ projects: [
     {
-      title: "Minutes of Meeting Recorder",
-      description: "Automated meeting summarization system that extracts key discussion points & action items, generates structured searchable summaries, and significantly reduces manual note-taking time.",
-      techStack: ["Python", "NLP", "Machine Learning"],
+      title: "VIRTU-BOARD-AI",
+      description: "An AI-powered virtual whiteboard application that enables real-time collaborative drawing, sketching, and brainstorming with intelligent features for enhanced creativity and productivity.",
+      techStack: ["AI", "Machine Learning", "Web Development", "Real-time Collaboration"],
       features: [
-        "Automated meeting summarization",
-        "Key discussion point extraction",
-        "Action item identification",
-        "Structured summary generation"
+        "Real-time collaborative whiteboard",
+        "AI-powered drawing assistance",
+        "Intelligent shape recognition",
+        "Multi-user synchronization",
+        "Smart object detection",
+        "Cloud-based storage"
       ],
-      github: "#",
+      github: "https://github.com/teena-grace/VIRTU-BOARD-AI",
       demo: "#"
+    },
+    
+    {
+      title: "AI Portfolio Website",
+      description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS, showcasing projects, skills, and professional experience with smooth animations and dark mode support.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      features: [
+        "Responsive design",
+        "Dark mode support",
+        "Smooth animations",
+        "SEO optimized",
+        "Fast loading",
+        "Contact form integration"
+      ],
+      github: "https://github.com/teena-grace/teena-portfolio",
+      demo: "https://teena-portfolio.vercel.app"
     }
   ],
 
