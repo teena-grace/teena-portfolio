@@ -99,7 +99,7 @@ export const portfolioData = {
         "Contact form integration"
       ],
       github: "https://github.com/teena-grace/teena-portfolio",
-      demo: "https://teena-portfolio.vercel.app"
+      demo: "https://teena-portfolio-ten.vercel.app"
     }
   ],
 
