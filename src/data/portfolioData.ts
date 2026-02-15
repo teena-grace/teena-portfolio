@@ -1,8 +1,8 @@
 export const portfolioData = {
   personal: {
     name: "Teena Jadhao",
-    tagline: "AI Engineering Student | Machine Learning & NLP Enthusiast",
-    intro: "I am a B.Tech Artificial Intelligence student with strong foundations in Machine Learning, NLP, and Full Stack Development. Passionate about building intelligent systems that solve real-world problems.",
+    tagline: "AI Engineering Student | Vibe coding and UI/UX designing Enthusiast",
+    intro: "I am a B.Tech Artificial Intelligent student .Passionate Designer & Vibe Coder crafting creative and intelligent digital experiences.",
     location: "Nagpur, Maharashtra, India",
     email: "teenajadhao@gmail.com",
     phone: "+91-9561546121",
@@ -85,21 +85,7 @@ export const portfolioData = {
       github: "https://github.com/teena-grace/VIRTU-BOARD-AI",
       demo: "#"
     },
-    {
-      title: "Minutes of Meeting Recorder",
-      description: "Automated meeting summarization system that extracts key discussion points & action items, generates structured searchable summaries, and significantly reduces manual note-taking time.",
-      techStack: ["Python", "NLP", "Machine Learning", "Speech Recognition"],
-      features: [
-        "Automated meeting summarization",
-        "Key discussion point extraction",
-        "Action item identification",
-        "Structured summary generation",
-        "Speaker identification",
-        "Export to multiple formats"
-      ],
-      github: "#",
-      demo: "#"
-    },
+    
     {
       title: "AI Portfolio Website",
       description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS, showcasing projects, skills, and professional experience with smooth animations and dark mode support.",
