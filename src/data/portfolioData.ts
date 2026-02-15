@@ -83,7 +83,7 @@ export const portfolioData = {
         "Cloud-based storage"
       ],
       github: "https://github.com/teena-grace/VIRTU-BOARD-AI",
-      demo: "#"
+      demo: "http://localhost:3001/dashboard"
     },
     
     {
