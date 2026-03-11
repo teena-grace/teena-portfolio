@@ -23,25 +23,25 @@ const Hero3DAnimated = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-100 to-cyan-100 dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-900 animate-gradient"></div>
+      <div className="absolute inset-0 hero-surface-gradient animate-gradient"></div>
       
       {/* Floating 3D Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating Cubes */}
         <div 
-          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/30 to-cyan-400/30 rounded-3xl animate-float blur-sm"
+          className="absolute top-20 left-10 w-32 h-32 hero-shape-gradient-1 rounded-3xl animate-float blur-sm"
           style={{ transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)` }}
         ></div>
         <div 
-          className="absolute top-40 right-20 w-40 h-40 bg-gradient-to-br from-sky-400/20 to-blue-400/20 rounded-full animate-float-reverse blur-md"
+          className="absolute top-40 right-20 w-40 h-40 hero-shape-gradient-2 rounded-full animate-float-reverse blur-md"
           style={{ transform: `translate(${-mousePosition.x}px, ${-mousePosition.y}px)` }}
         ></div>
         <div 
-          className="absolute bottom-32 left-1/4 w-24 h-24 bg-gradient-to-br from-cyan-400/25 to-blue-500/25 rounded-2xl animate-spin-slow"
+          className="absolute bottom-32 left-1/4 w-24 h-24 hero-shape-gradient-3 rounded-2xl animate-spin-slow"
           style={{ transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)` }}
         ></div>
         <div 
-          className="absolute bottom-20 right-1/3 w-36 h-36 bg-gradient-to-br from-blue-300/20 to-sky-300/20 rounded-full animate-float blur-lg"
+          className="absolute bottom-20 right-1/3 w-36 h-36 hero-shape-gradient-4 rounded-full animate-float blur-lg"
           style={{ transform: `translate(${-mousePosition.x * 0.3}px, ${mousePosition.y * 0.3}px)` }}
         ></div>
         
@@ -56,7 +56,7 @@ const Hero3DAnimated = () => {
         <div className="space-y-8 perspective-container">
           {/* Greeting Badge with 3D Effect */}
           <div className="inline-block animate-slide-up">
-            <span className="px-6 py-3 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/40 dark:to-cyan-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold shadow-lg glass-blue flex items-center gap-2 hover:scale-110 transition-transform duration-300">
+            <span className="px-6 py-3 hero-badge-gradient text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold shadow-lg glass-blue flex items-center gap-2 hover:scale-110 transition-transform duration-300">
               <Sparkles size={16} className="animate-pulse" />
               Welcome to my portfolio
             </span>
@@ -64,7 +64,7 @@ const Hero3DAnimated = () => {
 
           {/* Name with 3D Text Effect */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold animate-scale-in">
-            <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-sky-600 bg-clip-text text-transparent drop-shadow-lg animate-rotate-3d inline-block">
+            <span className="hero-text-gradient bg-clip-text text-transparent drop-shadow-lg animate-rotate-3d inline-block">
               {personal.name}
             </span>
           </h1>
@@ -101,9 +101,9 @@ const Hero3DAnimated = () => {
             <a
               href="/resume.pdf"
               download
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 relative overflow-hidden"
+              className="group inline-flex items-center gap-2 px-8 py-4 hero-button-gradient text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 hero-button-gradient-hover opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Download size={20} className="relative z-10" />
               <span className="relative z-10">Download Resume</span>
             </a>
