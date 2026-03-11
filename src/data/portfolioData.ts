@@ -7,7 +7,7 @@ export const portfolioData = {
     email: "teenajadhao@gmail.com",
     phone: "+91-9561546121",
     linkedin: "https://linkedin.com/in/teena-jadhao-09894231b",
-    github: "#", // Add your GitHub if you have one
+    github: "https://github.com/teena-grace",
   },
 
   about: {
@@ -83,7 +83,7 @@ export const portfolioData = {
         "Cloud-based storage"
       ],
       github: "https://github.com/teena-grace/VIRTU-BOARD-AI",
-      demo: "#"
+      demo: "https://teena-portfolio-ten.vercel.app/"
     },
     
     {

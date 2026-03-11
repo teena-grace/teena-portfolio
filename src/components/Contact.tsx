@@ -102,7 +102,7 @@ const Contact = () => {
               <p className="text-gray-700 dark:text-gray-300 mb-4 font-semibold">Follow Me:</p>
               <div className="flex gap-4">
                 <a
-                  href={personal.linkedin}
+                  href="https://www.linkedin.com/in/teena-jadhao-09894231b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-linear-to-br from-blue-600 to-blue-700 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -110,7 +110,7 @@ const Contact = () => {
                   <SiLinkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href={personal.github}
+                  href="https://github.com/teena-grace"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-linear-to-br from-gray-700 to-gray-900 text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-110"

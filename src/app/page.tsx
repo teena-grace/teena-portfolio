@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+
 import About from '@/components/About';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
@@ -8,16 +8,18 @@ import Skills from '@/components/Skills';
 import Leadership from '@/components/Leadership';
 import Certifications from '@/components/Certification';
 import Contact from '@/components/Contact';
+import Hero3DAnimated from '@/components/Hero3DAnimated';
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-900">
       <Navbar />
-      <Hero />
+      <Hero3DAnimated />
       <About />
       <Education />
       <Experience />
-      
+      <Projects />
       <Skills />
       <Leadership />
       <Certifications />

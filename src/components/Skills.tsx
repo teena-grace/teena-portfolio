@@ -5,7 +5,7 @@ import { SiGithub } from 'react-icons/si';
 import { portfolioData } from '@/data/portfolioData';
 
 const Projects = () => {
-  const { projects } = portfolioData;
+  const projects = portfolioData.projects || [];
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-slate-800">

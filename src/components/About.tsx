@@ -3,7 +3,7 @@
 import { Brain, Code, Palette } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';
 
-const AboutWithEffects = () => {
+const About = () => {
   const { about } = portfolioData;
 
   const interests = [
@@ -25,79 +25,48 @@ const AboutWithEffects = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-slate-900">
+    <section id="about" className="py-20 bg-linear-to-br from-blue-50 to-cyan-50 dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
-          <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-linear-to-r from-blue-600 via-cyan-600 to-sky-600 mx-auto rounded-full shadow-lg glow-blue"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Professional Photo with Effects */}
-          <div className="relative group">
-            {/* Glowing Background */}
-            <div className="absolute inset-0 bg-linear-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-            
-            {/* Main Photo Container */}
-            <div className="relative rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl">
-              {/* Gradient Overlay on Hover */}
-              <div className="absolute inset-0 bg-linear-to-br from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-              
-              {/* Profile Photo */}
-              <div className="aspect-3/4 relative">
-                <img 
-                  src="/profile.png" 
-                  alt="Teena Jadhao"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.innerHTML = '<div class="w-full h-full bg-linear-to-br from-blue-400 to-purple-600 flex items-center justify-center"><span class="text-9xl">👩‍💻</span></div>';
-                    }
-                  }}
-                />
-              </div>
-
-              {/* Info Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 z-20">
-                <h3 className="text-2xl font-bold text-white mb-1">Teena Jadhao</h3>
-                <p className="text-blue-300">AI Engineering Student</p>
-                <div className="mt-3 flex gap-2">
-                  <span className="px-3 py-1 bg-blue-500/30 text-white text-sm rounded-full backdrop-blur-sm">
-                    CGPA 9.8
-                  </span>
-                  <span className="px-3 py-1 bg-purple-500/30 text-white text-sm rounded-full backdrop-blur-sm">
-                    3+ Internships
-                  </span>
+          {/* Left Side - Image/Illustration Placeholder */}
+          <div className="relative">
+            <div className="aspect-square rounded-2xl bg-linear-to-br from-blue-400 to-purple-600 p-1">
+              <div className="w-full h-full rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-linear-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
+                    <span className="text-6xl">👩‍💻</span>
+                  </div>
+                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">Teena Jadhao</p>
+                  <p className="text-gray-600 dark:text-gray-400 mt-2">AI Engineering Student</p>
                 </div>
               </div>
-
-              {/* Corner Decoration */}
-              <div className="absolute top-4 right-4 w-16 h-16 border-t-4 border-r-4 border-white/50 rounded-tr-2xl z-20"></div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 border-b-4 border-l-4 border-white/50 rounded-bl-2xl z-20"></div>
             </div>
           </div>
 
-          {/* Right Side - Content */}
+          {/* Right Side - Content with Animations */}
           <div className="space-y-6">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed animate-slide-up">
               {about.content}
             </p>
 
-            {/* Interests Grid */}
+            {/* Interests Grid with 3D Cards */}
             <div className="grid sm:grid-cols-3 gap-4 pt-6">
               {interests.map((interest, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-xl bg-linear-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="p-6 rounded-xl bg-linear-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 card-3d animate-slide-up backdrop-blur-sm"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="text-blue-600 dark:text-blue-400 mb-3">
+                  <div className="text-blue-600 dark:text-blue-400 mb-3 animate-float">
                     {interest.icon}
                   </div>
                   <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">
@@ -110,19 +79,19 @@ const AboutWithEffects = () => {
               ))}
             </div>
 
-            {/* Stats */}
+            {/* Stats with 3D Animation */}
             <div className="grid grid-cols-3 gap-4 pt-6">
-              <div className="text-center p-4 rounded-xl bg-blue-50 dark:bg-slate-800">
-                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">9.8</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">CGPA</p>
+              <div className="text-center p-4 rounded-xl bg-linear-to-br from-blue-100 to-blue-200 dark:from-blue-900/40 dark:to-blue-800/40 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 card-3d">
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 animate-pulse">9.8</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 font-semibold">CGPA</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-purple-50 dark:bg-slate-800">
-                <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">3+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Internships</p>
+              <div className="text-center p-4 rounded-xl bg-linear-to-br from-cyan-100 to-cyan-200 dark:from-cyan-900/40 dark:to-cyan-800/40 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 card-3d">
+                <p className="text-3xl font-bold text-cyan-600 dark:text-cyan-400 animate-pulse">3+</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 font-semibold">Internships</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-pink-50 dark:bg-slate-800">
-                <p className="text-3xl font-bold text-pink-600 dark:text-pink-400">5+</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Projects</p>
+              <div className="text-center p-4 rounded-xl bg-linear-to-br from-sky-100 to-sky-200 dark:from-sky-900/40 dark:to-sky-800/40 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 card-3d">
+                <p className="text-3xl font-bold text-sky-600 dark:text-sky-400 animate-pulse">5+</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 font-semibold">Projects</p>
               </div>
             </div>
           </div>
@@ -132,4 +101,4 @@ const AboutWithEffects = () => {
   );
 };
 
-export default AboutWithEffects;
+export default About;
