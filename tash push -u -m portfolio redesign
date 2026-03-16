@@ -1,0 +1,29 @@
+warning: in the working copy of 'next.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'out/index.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/globals.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/layout.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/page.tsx', LF will be replaced by CRLF the next time Git touches it
+ next.config.js                    |  15 [31m-[m
+ next.config.ts                    |   6 [32m+[m[31m-[m
+ out/index.html                    |   2 [32m+[m[31m-[m
+ out/index.txt                     |  52 [32m+[m[31m-[m
+ package-lock.json                 | 107 [32m+[m[31m---[m
+ package.json                      |  13 [32m+[m[31m-[m
+ src/app/globals.css               | 997 [32m+++++++++++++++++++++++++++++++[m[31m-------[m
+ src/app/layout.tsx                |  16 [32m+[m[31m-[m
+ src/app/page.tsx                  | 265 [32m++++++++[m[31m--[m
+ src/components/About.tsx          | 104 [31m----[m
+ src/components/Certification.tsx  |  43 [31m--[m
+ src/components/Contact.tsx        | 195 [31m--------[m
+ src/components/Education.tsx      |  76 [31m---[m
+ src/components/Experience.tsx     |  77 [31m---[m
+ src/components/Hero.tsx           | 106 [31m----[m
+ src/components/Hero3DAnimated.tsx | 138 [31m------[m
+ src/components/Leadership.tsx     |  61 [31m---[m
+ src/components/Navbar.tsx         |  91 [31m----[m
+ src/components/Project.tsx        | 195 [31m--------[m
+ src/components/Skills.tsx         | 111 [31m-----[m
+ src/data/portfolioData.ts         | 141 [31m------[m
+ 21 files changed, 1111 insertions(+), 1700 deletions(-)

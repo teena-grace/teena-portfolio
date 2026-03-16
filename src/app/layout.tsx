@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Teena Jadhao - AI Engineering Student",
-  description: "Portfolio of Teena Jadhao - AI Engineering Student specializing in Machine Learning, NLP, and Full Stack Development",
-  keywords: "AI, Machine Learning, NLP, Full Stack Developer, Portfolio",
+  title: "Teena Jadhao | AI Portfolio",
+  description: "A black-and-white glassmorphism portfolio for Teena Jadhao, AI Engineering Student.",
 };
 
 export default function RootLayout({
@@ -16,10 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
