@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Brain, Code, Palette } from 'lucide-react';
@@ -58,7 +59,7 @@ const AboutWithEffects = () => {
                     target.style.display = 'none';
                     const parent = target.parentElement;
                     if (parent) {
-                      parent.innerHTML = '<div class="w-full h-full bg-linear-to-br from-blue-400 to-purple-600 flex items-center justify-center"><span class="text-9xl">👩‍💻</span></div>';
+                      parent.innerHTML = '<div class="w-full h-full bg-linear-to-br from-blue-400 to-purple-600 flex items-center justify-center"><span class="text-9xl">ðŸ‘©â€ðŸ’»</span></div>';
                     }
                   }}
                 />

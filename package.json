@@ -9,13 +9,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
-    "next": "16.1.0",
-=======
     "next": "16.1.6",
->>>>>>> Stashed changes
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

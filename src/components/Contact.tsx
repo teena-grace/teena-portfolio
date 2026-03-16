@@ -60,12 +60,12 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Let's Connect!
+              Let&apos;s Connect!
             </span>
           </h2>
           <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            I'm always open to discussing new opportunities and collaborations
+            I&apos;m always open to discussing new opportunities and collaborations
           </p>
         </div>
 
