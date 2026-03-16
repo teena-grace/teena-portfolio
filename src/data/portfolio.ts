@@ -10,7 +10,6 @@ export const portfolio = {
     email: 'teenajadhao@gmail.com',
     linkedin: 'https://www.linkedin.com/in/teena-jadhao-09894231b',
     github: 'https://github.com/teena-grace',
-    photoHint: 'Add your photo as public/profile-photo.jpg or public/profile-photo.png',
   },
   stats: [
     { label: 'CGPA', value: '9.8/10' },

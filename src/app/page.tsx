@@ -221,7 +221,6 @@ export default function Home() {
           <div>
             <p className="eyebrow">Contact</p>
             <h2>Available for internships, collaborations, and ambitious product ideas.</h2>
-            <p className="contact-note">{portfolio.personal.photoHint}</p>
           </div>
           <div className="contact-actions">
             <a href={`mailto:${portfolio.personal.email}`}>{portfolio.personal.email}</a>
